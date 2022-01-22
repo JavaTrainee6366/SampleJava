@@ -1,26 +1,32 @@
 package OOPs;
 
 public class ConstructorDemo {
-	
-	public ConstructorDemo()  //Default Constructor
+
+
+	public ConstructorDemo() // Default Constructor
 	{
-		System.out.println("Default Constructor");
+
+		System.out.println("Default Constructor-1");
 	}
-	
-	//Parameterized
-	
-	public ConstructorDemo(int x)
-	{
-		System.out.println("Parametrized & value is::"+x);
+
+	// Parameterized
+
+	public ConstructorDemo(int x) { 
+		this(); 
+		System.out.println("constructor-2");
+	 // System.out.println("parametrized & value is::"+x); 
+		}
+
+	public ConstructorDemo(int x, int y) {
+		this(y);
+		System.out.println("Constructor-3");
+
 	}
-	
-	
+
 	public static void main(String[] args) {
-		ConstructorDemo obj =new ConstructorDemo();
-		ConstructorDemo obj1 =new ConstructorDemo(20);
-		
-		 new ConstructorDemo();
-		 new ConstructorDemo(10);
+
+		new ConstructorDemo(20, 30); // Invoke constructor
+
 	}
 
 }
